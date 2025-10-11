@@ -109,15 +109,14 @@ export default function Header() {
             )}
             
             {/* Dark Mode Toggle */}
-            {mounted && (
-              <button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium text-lg"
-                aria-label="Toggle dark mode"
-              >
-                {theme === "dark" ? "☼" : "☾"}
-              </button>
-            )}
+            <button
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              className="px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium text-lg"
+              aria-label="Toggle dark mode"
+            >
+              {mounted && (theme === "dark" ? "☼" : "☾")}
+              {!mounted && "☾"}
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -204,15 +203,16 @@ export default function Header() {
               </div>
               
               {/* Mobile Dark Mode Toggle */}
-              {mounted && (
-                <button
-                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  className="text-left text-base text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium py-2 flex items-center gap-2"
-                >
-                  <span className="text-lg">{theme === "dark" ? "☼" : "☾"}</span>
-                  {theme === "dark" ? "Light Mode" : "Dark Mode"}
-                </button>
-              )}
+              <button
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                className="text-left text-base text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium py-2 flex items-center gap-2"
+              >
+                <span className="text-lg">
+                  {mounted && (theme === "dark" ? "☼" : "☾")}
+                  {!mounted && "☾"}
+                </span>
+                {mounted ? (theme === "dark" ? "Light Mode" : "Dark Mode") : "Dark Mode"}
+              </button>
             </div>
           </div>
         )}

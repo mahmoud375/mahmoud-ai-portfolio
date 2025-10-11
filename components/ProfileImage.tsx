@@ -7,7 +7,7 @@ export default function ProfileImage() {
   }
 
   return (
-    <div className="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full overflow-hidden border-4 border-gray-100 shadow-lg">
+    <div className="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full overflow-hidden border-4 border-gray-800 dark:border-gray-100 shadow-lg">
       <Image
         src={profile.imagePath}
         alt={`${profile.name} - Profile Picture`}
