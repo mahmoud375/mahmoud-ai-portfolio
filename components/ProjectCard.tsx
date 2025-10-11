@@ -37,7 +37,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="px-3 py-1 text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full"
+              className="px-3 py-1 text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-default"
             >
               {tech}
             </span>

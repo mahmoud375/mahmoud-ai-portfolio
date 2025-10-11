@@ -18,7 +18,7 @@ export default function SectionLayout({
   return (
     <section
       id={id}
-      className={`w-full max-w-content mx-auto px-6 sm:px-8 mb-16 sm:mb-20 scroll-mt-28 ${className}`}
+      className={`w-full max-w-content mx-auto px-6 sm:px-8 mb-16 sm:mb-20 scroll-mt-36 ${className}`}
     >
       {title && (
         <div className="mb-8">
