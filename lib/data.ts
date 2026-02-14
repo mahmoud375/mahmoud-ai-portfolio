@@ -172,13 +172,7 @@ export const projects: Project[] = [
     id: "proj-2",
     name: "PacketLens",
     description:
-      "A polyglot NIDS that captures live network traffic at the kernel level, extracts 54 statistical flow features using numerically stable algorithms, and classifies threats in <2ms using an XGBoost model compiled to ONNX — all orchestrated through bidirectional gRPC streaming with full Prometheus/Grafana observability.",
-    longDescription: [
-      "The edge engine implements Welford's Online Algorithm for computing running mean, variance, and standard deviation with numerical stability across 6+ orders of magnitude.",
-      "Features lock-free load shedding using atomic operations to handle DDoS resilience with a 100K concurrent flow cap (~40 MB memory ceiling), and sub-millisecond ONNX inference with asyncio offloading.",
-      "Production-grade preprocessing pipeline applies the exact same transforms as training — solving the critical train/serve skew problem with log1p on 18 heavy-tail features and RobustScaler.",
-      "Auto-provisioned Grafana dashboards with zero-touch observability: clone → docker compose up → live threat detection.",
-    ],
+      "High-performance real-time Network Intrusion Detection System. Captures live traffic with Go, classifies threats in <2ms using ONNX-compiled XGBoost, with full Prometheus/Grafana observability — all in one docker compose up.",
     technologies: [
       "Go",
       "Python",
@@ -188,13 +182,10 @@ export const projects: Project[] = [
       "Docker",
       "Prometheus",
       "Grafana",
-      "gopacket",
-      "Machine Learning",
-      "Network Security",
     ],
     github: "https://github.com/mahmoud375/Packet-Lens.git",
     featured: true,
-    year: "2026",
+    year: "2025",
   },
   {
     id: "proj-1",
