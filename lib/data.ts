@@ -185,7 +185,7 @@ export const projects: Project[] = [
     ],
     github: "https://github.com/mahmoud375/Packet-Lens.git",
     featured: true,
-    year: "2025",
+    year: "2026",
   },
   {
     id: "proj-1",
