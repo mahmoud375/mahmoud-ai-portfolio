@@ -86,7 +86,7 @@ export const profile: Profile = {
   ],
   email: "mahmoud.elgendy.2182003@gmail.com",
   location: "Tanta, Gharbia, Egypt",
-  imagePath: "/profile.PNG",
+  imagePath: "/profile.jpg", 
   socialLinks: {
     linkedin: "https://www.linkedin.com/in/mahmoud-elgendy2003",
     github: "https://github.com/mahmoud375",
