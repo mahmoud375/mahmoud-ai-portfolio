@@ -86,7 +86,7 @@ export const profile: Profile = {
   ],
   email: "mahmoud.elgendy.2182003@gmail.com",
   location: "Tanta, Gharbia, Egypt",
-  imagePath: "/profile.jpg", 
+  imagePath: "/profile.jpg",
   socialLinks: {
     linkedin: "https://www.linkedin.com/in/mahmoud-elgendy2003",
     github: "https://github.com/mahmoud375",
@@ -168,6 +168,34 @@ export const publications: Publication[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    id: "proj-2",
+    name: "PacketLens",
+    description:
+      "A polyglot NIDS that captures live network traffic at the kernel level, extracts 54 statistical flow features using numerically stable algorithms, and classifies threats in <2ms using an XGBoost model compiled to ONNX — all orchestrated through bidirectional gRPC streaming with full Prometheus/Grafana observability.",
+    longDescription: [
+      "The edge engine implements Welford's Online Algorithm for computing running mean, variance, and standard deviation with numerical stability across 6+ orders of magnitude.",
+      "Features lock-free load shedding using atomic operations to handle DDoS resilience with a 100K concurrent flow cap (~40 MB memory ceiling), and sub-millisecond ONNX inference with asyncio offloading.",
+      "Production-grade preprocessing pipeline applies the exact same transforms as training — solving the critical train/serve skew problem with log1p on 18 heavy-tail features and RobustScaler.",
+      "Auto-provisioned Grafana dashboards with zero-touch observability: clone → docker compose up → live threat detection.",
+    ],
+    technologies: [
+      "Go",
+      "Python",
+      "gRPC",
+      "ONNX Runtime",
+      "XGBoost",
+      "Docker",
+      "Prometheus",
+      "Grafana",
+      "gopacket",
+      "Machine Learning",
+      "Network Security",
+    ],
+    github: "https://github.com/mahmoud375/Packet-Lens.git",
+    featured: true,
+    year: "2025",
+  },
   {
     id: "proj-1",
     name: "YouTube Trending EDA",
